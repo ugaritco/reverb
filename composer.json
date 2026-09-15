@@ -1,0 +1,81 @@
+{
+    "name": "ugarit/reverb",
+    "description": "Ugarit Reverb provides a real-time WebSocket communication backend for Ugarit applications.",
+    "keywords": [
+        "ugarit",
+        "websocket",
+        "websockets",
+        "real-time"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Muath R Abu Ouda",
+            "email": "muathrabuouda@hotmail.com",
+            "role": "Vision Leader of Ugarit"
+        },
+        {
+            "name": "Taylor Otwell",
+            "email": "taylor@laravel.com",
+            "role": "Original Creator & Primary Developer"
+        },
+        {
+            "name": "Joe Dixon",
+            "email": "joe@ugarit.com"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "clue/redis-react": "^2.6",
+        "guzzlehttp/psr7": "^2.6",
+        "heritage/console": "^1.00.00",
+        "heritage/contracts": "^1.00.00",
+        "heritage/http": "^1.00.00",
+        "heritage/support": "^1.00.00",
+        "ugarit/prompts": "^1.00.00",
+        "pusher/pusher-php-server": "^7.2",
+        "ratchet/rfc6455": "^0.4",
+        "react/promise-timer": "^1.10",
+        "react/socket": "^1.14",
+        "symfony/console": "^6.0|^7.0|^8.0",
+        "symfony/http-foundation": "^6.3|^7.0|^8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^8.36|^9.15|^10.8|^11.0",
+        "pestphp/pest": "^2.0|^3.0|^4.0",
+        "phpstan/phpstan": "^1.10",
+        "ratchet/pawl": "^0.4.1",
+        "react/async": "^4.2",
+        "react/http": "^1.9"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ugarit\\Reverb\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Ugarit\\Reverb\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "ugarit": {
+            "providers": [
+                "Ugarit\\Reverb\\ApplicationManagerServiceProvider",
+                "Ugarit\\Reverb\\ReverbServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "scripts": {
+        "test": "./vendor/bin/pest"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "version": "1.00.00"
+}
